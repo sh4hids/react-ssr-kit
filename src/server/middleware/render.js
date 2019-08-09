@@ -2,9 +2,8 @@ import escapeStringRegexp from "escape-string-regexp";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import { StaticRouter, matchPath } from "react-router-dom";
-import routes from "../../routes";
-
-import App from "../../App";
+import routes from "../../app/routes";
+import App from "../../app";
 
 const renderMiddleware = () => (req, res) => {
   let html = req.html;

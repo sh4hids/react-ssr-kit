@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { postActions } from "../../../state/posts";
+import { MainLayout } from "../../layouts";
 
 class PostPage extends Component {
   static async getInitialProps({ req, res }) {
@@ -18,16 +19,16 @@ class PostPage extends Component {
     const { allPosts } = this.props;
 
     return (
-      <div>
+      <MainLayout>
         <h1>Latest posts</h1>
         {allPosts.length &&
           allPosts.map(post => (
-            <div key={post.id}>
+            <div key={post.id} className="post">
               <h2>{post.title}</h2>
               <div>{post.body}</div>
             </div>
           ))}
-      </div>
+      </MainLayout>
     );
   }
 }

@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { Wrapper } from "../../components";
 import logo from "../../../logo.svg";
 import "../../../App.css";
 
 class HomePage extends Component {
   render() {
     return (
-      <div className="App">
+      <Wrapper>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -19,8 +21,9 @@ class HomePage extends Component {
           >
             Learn React
           </a>
+          <Link to="/posts">Visit our blog</Link>
         </header>
-      </div>
+      </Wrapper>
     );
   }
 }

@@ -15,6 +15,7 @@
       It will be replaced with the value of the ASSETS_PATH env var during the build.
       The default value is '/' and can be configured by setting the ASSETS_PATH env var.
     -->
+    __STYLE_TAGS__
     <title>React SSR App</title>
   </head>
   <body>
@@ -31,7 +32,7 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script>
-      window.__PRELOADED_STATE__ = __INITIAL_STATE__;
+      window.PRELOADED_STATE = __PRELOADED_STATE__;
     </script>
   </body>
 </html>

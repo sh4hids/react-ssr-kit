@@ -1,4 +1,4 @@
-import { HomePage, UserPage } from "./views/pages";
+import { HomePage, PostPage } from "./views/pages";
 
 const routes = [
   {
@@ -7,9 +7,9 @@ const routes = [
     component: HomePage
   },
   {
-    path: "/users",
+    path: "/posts",
     exact: true,
-    component: UserPage
+    component: PostPage
   }
 ];
 

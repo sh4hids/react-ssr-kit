@@ -1,8 +1,8 @@
-import { createStore, applyMiddleware, combineReducers } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension/developmentOnly";
-import thunk from "redux-thunk";
-import * as reducers from "./";
-import { apiService } from "../services";
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
+import thunk from 'redux-thunk';
+import * as reducers from './';
+import { apiService } from '../services';
 
 const rootReducer = combineReducers(reducers);
 

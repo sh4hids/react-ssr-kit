@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Wrapper } from "../../components";
-import logo from "../../../logo.svg";
-import "../../../App.css";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Wrapper } from '../../components';
+import logo from '../../../logo.svg';
+import '../../../App.css';
 
 class HomePage extends Component {
   render() {

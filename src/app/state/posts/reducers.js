@@ -1,7 +1,7 @@
-import * as types from "./types";
+import * as types from './types';
 
 const initialState = {
-  allPosts: []
+  allPosts: [],
 };
 
 const postReducers = function(state = initialState, { type, payload }) {
@@ -9,21 +9,21 @@ const postReducers = function(state = initialState, { type, payload }) {
     case types.FETCH_ALL:
       return {
         ...state,
-        isFetchingAll: true
+        isFetchingAll: true,
       };
     case types.FETCH_ALL_DONE:
       return {
         ...state,
         allPosts: [...payload],
         isFetchingAll: false,
-        fetchAllDone: true
+        fetchAllDone: true,
       };
     case types.FETCH_ALL_FAILED:
       return {
         ...state,
         isFetchingAll: false,
         fetchAllDone: false,
-        fetchAllFailed: true
+        fetchAllFailed: true,
       };
     default:
       return state;

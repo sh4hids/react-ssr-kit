@@ -1,7 +1,7 @@
-import isomorphicFetch from "isomorphic-fetch";
+import isomorphicFetch from 'isomorphic-fetch';
 
 const getJSON = async function(response) {
-  if (response.status === 204) return "";
+  if (response.status === 204) return '';
   try {
     const data = await response.json(); // Parse it as text
     return data;
@@ -21,16 +21,16 @@ const parseStatus = function(status, res) {
 };
 
 const requestHeaders = function(token, type) {
-  if (type && type === "multipart") {
+  if (type && type === 'multipart') {
     return {
-      Authorization: token ? `${token}` : ""
+      Authorization: token ? `${token}` : '',
     };
   }
 
   return {
-    Accept: "application/json",
-    "Content-Type": "application/json",
-    Authorization: token ? `${token}` : ""
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+    Authorization: token ? `${token}` : '',
   };
 };
 
@@ -39,11 +39,11 @@ const fetch = async ({ url, method, body, type, token }) => {
     method,
     headers: requestHeaders(token, type),
     body:
-      method !== "GET"
-        ? type !== "multipart"
+      method !== 'GET'
+        ? type !== 'multipart'
           ? JSON.stringify(body)
           : body
-        : null
+        : null,
   };
   const res = await isomorphicFetch(url, options);
 

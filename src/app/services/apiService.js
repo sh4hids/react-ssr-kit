@@ -1,5 +1,5 @@
-import fetch from "../utils/fetch";
-import { api } from "../config/";
+import fetch from '../utils/fetch';
+import { api } from '../config/';
 
 const apiService = () => next => async action => {
   const result = next(action);
@@ -7,8 +7,8 @@ const apiService = () => next => async action => {
     return result;
   }
 
-  const { path, method = "GET", body, type, isPrivate = false } = action.meta;
-  const token = isPrivate ? "token" : "";
+  const { path, method = 'GET', body, type, isPrivate = false } = action.meta;
+  const token = isPrivate ? 'token' : '';
 
   if (!path) {
     throw new Error(`'path' not specified for async action ${action.type}`);
@@ -32,7 +32,7 @@ function handleErrors(err, action, next) {
   next({
     type: `${action.type}_failed`,
     payload: err,
-    meta: action.meta
+    meta: action.meta,
   });
 
   return err;
@@ -42,7 +42,7 @@ function handleResponse(res, action, next) {
   next({
     type: `${action.type}_done`,
     payload: res,
-    meta: action.meta
+    meta: action.meta,
   });
 
   return res;

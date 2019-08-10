@@ -1,16 +1,16 @@
-import { HomePage, PostPage } from "./views/pages";
+import { HomePage, PostPage } from './views/pages';
 
 const routes = [
   {
-    path: "/",
+    path: '/',
     exact: true,
-    component: HomePage
+    component: HomePage,
   },
   {
-    path: "/posts",
+    path: '/posts',
     exact: true,
-    component: PostPage
-  }
+    component: PostPage,
+  },
 ];
 
 export default routes;

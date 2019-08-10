@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { postActions } from "../../../state/posts";
-import { MainLayout } from "../../layouts";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { postActions } from '../../../state/posts';
+import { MainLayout } from '../../layouts';
 
 class PostPage extends Component {
   static async getInitialProps({ req, res }) {
@@ -35,12 +35,12 @@ class PostPage extends Component {
 
 const mapStateToProps = ({ posts }) => {
   return {
-    allPosts: posts.allPosts
+    allPosts: posts.allPosts,
   };
 };
 
 const mapActionsToProps = {
-  fetchAll: postActions.fetchAll
+  fetchAll: postActions.fetchAll,
 };
 
 export default connect(
